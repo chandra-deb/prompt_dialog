@@ -19,6 +19,8 @@ Future<String> prompt(
   Widget textOK,
   Color okButtonColor,
   Color cancelButtonColor,
+  Color textCancelColor,
+  Color textOkColor,
   Widget textCancel,
   String initialValue,
   String hintText,
@@ -49,7 +51,14 @@ Future<String> prompt(
         actions: <Widget>[
           FlatButton(
               color: cancelButtonColor,
-              child: textCancel != null ? textCancel : Text('Cancel'),
+              child: textCancel != null
+                  ? textCancel
+                  : Text(
+                      'Cancel',
+                      style: TextStyle(
+                        color: Colors.white10,
+                      ),
+                    ),
               onPressed: () => Navigator.pop(context, null)),
           FlatButton(
               color: okButtonColor,
