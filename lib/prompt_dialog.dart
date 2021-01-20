@@ -56,7 +56,7 @@ Future<String> prompt(
                   : Text(
                       'Cancel',
                       style: TextStyle(
-                        color: Colors.white10,
+                        color: Colors.white,
                       ),
                     ),
               onPressed: () => Navigator.pop(context, null)),
