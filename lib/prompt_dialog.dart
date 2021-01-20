@@ -56,13 +56,18 @@ Future<String> prompt(
                   : Text(
                       'Cancel',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: textCancelColor ?? Colors.white,
                       ),
                     ),
               onPressed: () => Navigator.pop(context, null)),
           FlatButton(
               color: okButtonColor,
-              child: textOK != null ? textOK : Text('OK'),
+              child: textOK != null
+                  ? textOK
+                  : Text(
+                      'OK',
+                      style: TextStyle(color: textOkColor ?? Colors.white),
+                    ),
               onPressed: () => Navigator.pop(context, value)),
         ],
       ),
